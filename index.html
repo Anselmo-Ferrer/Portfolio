@@ -14,8 +14,8 @@
             <span id="logo">AnselmoFerrer</span>
             <div class="nav-list">
                 <li>
-                    <ul><a href="" target="_blank">Projetos</a></ul>
-                    <ul><a href="">Resumo</a></ul>
+                    <ul><a href="">Home</a></ul>
+                    <ul><a href="">Projetos</a></ul>
                     <ul><a href="">Contato</a></ul>
                     <button id="light"><i class="fa-solid fa-sun"></i></button>
                     <button id="dark"><i class="fa-solid fa-moon"></i></button>
@@ -23,12 +23,12 @@
             </div>
         </nav>
 
-        <main class="about">
+        <main class="about" id="home">
             <span id="hello">Ola, me chamo</span>
             <span id="name">Anselmo Ferrer</span>
             <span id="dev">Desenvolvedor web e Cientista de dados</span>
             <div class="profile-img">
-                <img src="imgs/profile-3.pngg" alt="">
+                
             </div>
             <div class="contacts-links">
                 <button class="contacts-button" id="contacts-1"><i class="fa-solid fa-envelope"></i>Email</button>
@@ -43,41 +43,41 @@
             <span id="skills-title"><span id="skills-line">Habilid</span>ades</span>
             <div class="skills-content">
                 <div class="skills-card">
-                    <div class="skills-circular">
-                        4.8
-                    </div>
+                    <span class="skills-circular-text">4.5</span>
+                    <div class="skills-circular" id="circular-1"></div>
                     <span class="skills-card-title">JavaScript</span>
                 </div>
                 <div class="skills-card">
-                    <div class="skills-circular">
-                        4.0
-                    </div>
+                    <span class="skills-circular-text">4.0</span>
+                    <div class="skills-circular" id="circular-2"></div>
                     <span class="skills-card-title">Css</span>
                 </div>
                 <div class="skills-card">
-                    <div class="skills-circular">
-                        4.5
-                    </div>
+                    <span class="skills-circular-text">5.0</span>
+                    <div class="skills-circular" id="circular-3"></div>
                     <span class="skills-card-title">Html</span>
                 </div>
                 <div class="skills-card">
-                    <div class="skills-circular">
-                        4.5
-                    </div>
+                    <span class="skills-circular-text">4.0</span>
+                    <div class="skills-circular" id="circular-4"></div>
                     <span class="skills-card-title">Microsoft Excel</span>
                 </div>
             </div>
         </main>
 
-        <main class="projects">
+        <main class="projects" id="projects">
             <div class="projects-top">
-                <div id="line-1"></div>
-                <span id="projects-title">Projetos</span>
-                <div id="line-2"></div>
+                <div class="projects-top-right">
+                    <div id="line-1"></div>
+                    <span id="projects-title">Projetos</span>
+                </div>
+                <div class="projects-top-left">
+                    <div id="line-2"></div>
+                </div>
             </div>
             <div class="projects-content">
 
-                <div class="projects-card">
+                <div class="projects-card-1">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="projects-card">
+                <div class="projects-card-1">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="projects-card">
+                <div class="projects-card-1">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="projects-card">
+                <div class="projects-card-2">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
 
-                <div class="projects-card">
+                <div class="projects-card-2">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="projects-card">
+                <div class="projects-card-2">
                     <img src="projects-imgs/23985231_6867640.jpg" alt="" class="projects-img">
                     <span class="projects-card-title">Conversor de Bases</span>
                     <span class="projects-card-subtitle">conversor de bases decimais, binarias, hexadecimais e octais </span>
@@ -235,12 +235,13 @@
                     </div>
                 </div>
             </div>
-
-
+            <div class="certificado-more">
+                <button class="more-btn"><i class="fa-solid fa-plus"></i>Ver mais</button>
+            </div>
 
         </main>
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer-content">
                 <span id="footer-title">Interressado no meu trabalho</span>
                 <span id="footer-subtitle">Entre em contanto para saber mais</span>
