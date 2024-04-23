@@ -994,7 +994,141 @@ opacity: 1;
 
 /* media screen  */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 425px) {
+    .navegation {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-list li {
+        gap: 3rem;
+    }
+
+    .skills-content {
+        flex-direction: column;
+    }
+
+    .more-content {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 10rem 2rem 0rem 2rem;
+    }
+
+    #name {
+        font-size: 45px;
+        line-height: 100%;
+        padding: 1rem 0rem 1.2rem 0rem;
+    }
+    
+    #dev {
+        font-size: 12px;
+    }
+
+    .contacts-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    }
+
+    .contacts-links {
+        display: block;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
+    .contacts-button {
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .projects {
+        padding: 1.5rem;
+    }
+
+    .projects-content {
+        flex-direction: column;
+    }
+    
+    .projects-card-1, .projects-card-2 {
+        width: 100%;
+    }
+    
+    .projects-img {
+        height: 17rem;
+    }
+
+    .more-content {
+        gap: 5rem;
+    }
+
+    .more {
+        padding: 1.5rem;
+    }
+
+    .language-card {
+        width: 100%;
+    }
+    
+    #portugues-line {
+        width: 100%;
+    }
+    
+    #ingles-line {
+        width: 85%;
+    }
+    
+    #portugues-subtitle {
+        right: 0%;
+    }
+    
+    #ingles-subtitle {
+        right: 16%;
+    }
+    
+    .studies-card {
+        width: 100%;
+    }
+
+    #studies-title {
+        display: flex;
+    }
+
+    .certificado {
+        padding: 5rem 1.5rem 10rem 1.5rem;
+    }
+    
+    .certificado-card {
+        width: 100%;
+    }
+    
+    .certificado-img  {
+        border-radius: 0.4rem;
+        height: 17rem;
+    }
+
+    .footer {
+        padding: 3rem;
+    }
+
+    .footer-button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-butons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 500px) {
     .navegation {
         flex-direction: column;
         gap: 1.5rem;
