@@ -1013,7 +1013,7 @@ opacity: 1;
     }
 
     #name {
-        font-size: 60px;
+        font-size: 45px;
         line-height: 100%;
         padding: 1rem 0rem 1.2rem 0rem;
     }
@@ -1032,6 +1032,10 @@ opacity: 1;
         width: 100%;
     }
 
+    .projects {
+        padding: 1.5rem;
+    }
+
     .projects-content {
         flex-direction: column;
     }
@@ -1041,11 +1045,15 @@ opacity: 1;
     }
     
     .projects-img {
-        height: 12rem;
+        height: 17rem;
     }
 
     .more-content {
         gap: 5rem;
+    }
+
+    .more {
+        padding: 1.5rem;
     }
 
     .language-card {
@@ -1077,7 +1085,7 @@ opacity: 1;
     }
 
     .certificado {
-        padding: 5rem 5rem 10rem 5rem;
+        padding: 5rem 1.5rem 10rem 1.5rem;
     }
     
     .certificado-card {
@@ -1086,7 +1094,7 @@ opacity: 1;
     
     .certificado-img  {
         border-radius: 0.4rem;
-        height: 13rem;
+        height: 17rem;
     }
 
     .footer-button {
@@ -1143,6 +1151,10 @@ opacity: 1;
         margin-bottom: 1rem;
     }
 
+    .projects {
+        padding: 2rem;
+    }
+
     .projects-content {
         flex-direction: column;
     }
@@ -1164,6 +1176,10 @@ opacity: 1;
 
     .more-content {
         gap: 5rem;
+    }
+
+    .more {
+        padding: 2rem;
     }
 
     .language-card {
@@ -1195,7 +1211,7 @@ opacity: 1;
     }
 
     .certificado {
-        padding: 5rem 5rem 10rem 5rem;
+        padding: 5rem 2.5rem 10rem 2.5rem;
     }
     
     .certificado-card {
