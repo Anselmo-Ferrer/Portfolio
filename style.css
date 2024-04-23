@@ -1012,6 +1012,10 @@ opacity: 1;
         flex-direction: column;
     }
 
+    .about {
+        padding: 10rem 2rem 0rem 2rem;
+    }
+
     #name {
         font-size: 45px;
         line-height: 100%;
@@ -1028,8 +1032,18 @@ opacity: 1;
     gap: 1rem;
     }
 
+    .contacts-links {
+        display: block;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
     .contacts-button {
-        width: 100%;
+        width: 47%;
+        margin-bottom: 1rem;
+        font-size: 12px;
     }
 
     .projects {
@@ -1097,9 +1111,19 @@ opacity: 1;
         height: 17rem;
     }
 
+    .footer {
+        padding: 3rem;
+    }
+
     .footer-button {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    .footer-butons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
