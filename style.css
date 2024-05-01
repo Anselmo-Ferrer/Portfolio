@@ -99,6 +99,8 @@
     --components-color: #4180b7;
 }
 
+/* create by AnselmoFerrer */
+
 html {
     scroll-behavior: smooth;
   }
@@ -531,7 +533,7 @@ ul, li {
     flex-wrap: wrap;
 }
 
-.projects-card-1 {
+.projects-card-1, .projects-card-2 {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -1128,7 +1130,7 @@ opacity: 1;
 }
 
 
-@media screen and (min-width: 425px) and (max-width: 500px) {
+@media screen and (min-width: 425px) and (max-width: 550px) {
     .navegation {
         flex-direction: column;
         gap: 1.5rem;
@@ -1394,8 +1396,17 @@ opacity: 1;
         flex-wrap: wrap;
     }
     
-    .projects-card-1 {
+    .projects-card-1, .projects-card-2 {
         width: 48%;
+    }
+
+    .certificado-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .certificado-card {
+        width: 80%;
     }
 
     .projects-a {
@@ -1460,7 +1471,7 @@ opacity: 1;
         flex-wrap: wrap;
     }
     
-    .projects-card-1 {
+    .projects-card-1, .projects-card-2 {
         width: 48%;
     }
 
