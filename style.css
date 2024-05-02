@@ -1080,7 +1080,7 @@ opacity: 1;
         gap: 3rem;
     }
 
-    .skills-content {
+    .skills-content1, .skills-content2 {
         flex-direction: column;
     }
 
@@ -1214,7 +1214,7 @@ opacity: 1;
         gap: 3rem;
     }
 
-    .skills-content {
+    .skills-content1, .skills-content2 {
         flex-direction: column;
     }
 
@@ -1354,7 +1354,7 @@ opacity: 1;
         gap: 3rem;
     }
 
-    .skills-content {
+    .skills-content1, .skills-content2 {
         flex-direction: column;
     }
 
@@ -1504,7 +1504,7 @@ opacity: 1;
         gap: 3rem;
     }
 
-    .skills-content {
+    .skills-content1, .skills-content2 {
         flex-direction: row;
         flex-wrap: wrap;
     }
