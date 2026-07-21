@@ -4,13 +4,29 @@ import { useState, useRef } from "react";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
+const MIN_MESSAGE = 10;
+
 export default function Contact() {
   const [state, setState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [message, setMessage] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+
+  const messageLen = message.trim().length;
+  const messageValid = messageLen >= MIN_MESSAGE;
+  const remaining = MIN_MESSAGE - messageLen;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!messageValid) {
+      setErrorMsg(
+        `Your message needs at least ${MIN_MESSAGE} characters required — just ${remaining} more to go.`
+      );
+      setState("error");
+      return;
+    }
+
     setState("loading");
     setErrorMsg("");
 
@@ -31,10 +47,16 @@ export default function Contact() {
       if (res.ok) {
         setState("success");
         formRef.current?.reset();
+        setMessage("");
         setTimeout(() => setState("idle"), 5000);
       } else {
         const data = await res.json();
-        setErrorMsg(data.error ?? "Something went wrong. Try again.");
+        const fieldMsg = data.issues?.message?.[0] as string | undefined;
+        setErrorMsg(
+          fieldMsg
+            ? `Message: ${fieldMsg}`
+            : data.error ?? "Something went wrong. Try again."
+        );
         setState("error");
       }
     } catch {
@@ -116,9 +138,26 @@ export default function Contact() {
                   className="ft"
                   placeholder="Tell me about your project or idea..."
                   required
-                  minLength={10}
+                  minLength={MIN_MESSAGE}
                   maxLength={2000}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  aria-describedby="message-hint"
                 />
+                <div className="fbar" aria-hidden="true">
+                  <span
+                    className={`fbar-fill ${messageValid ? "fbar-ok" : ""}`}
+                    style={{ width: `${Math.min(100, (messageLen / MIN_MESSAGE) * 100)}%` }}
+                  />
+                </div>
+                <p
+                  id="message-hint"
+                  className={`fhint ${messageValid ? "fhint-ok" : ""}`}
+                >
+                  {messageValid
+                    ? "✓ Looks good — you can send your message."
+                    : `${messageLen} / ${MIN_MESSAGE} characters required — ${remaining} more to send.`}
+                </p>
               </div>
 
               {state === "error" && (
@@ -133,7 +172,7 @@ export default function Contact() {
               <button
                 type="submit"
                 className="fsub mag"
-                disabled={state === "loading" || state === "success"}
+                disabled={state === "loading" || state === "success" || !messageValid}
               >
                 {state === "loading" ? "Sending…" : "Send Message →"}
               </button>
