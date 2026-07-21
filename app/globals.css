@@ -646,6 +646,23 @@ section { padding: 120px 52px; }
   font-family: var(--mono); font-size: 11px; color: oklch(0.7 0.2 30);
   margin-top: 4px;
 }
+.fhint {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.02em;
+  color: oklch(0.62 0.02 260); margin-top: 6px;
+  transition: color 0.2s ease;
+}
+.fhint-ok { color: var(--accent); }
+
+.fbar {
+  height: 4px; width: 100%; margin-top: 8px; border-radius: 999px;
+  background: oklch(0.5 0.02 260 / 0.18); overflow: hidden;
+}
+.fbar-fill {
+  display: block; height: 100%; border-radius: 999px;
+  background: oklch(0.72 0.16 40);
+  transition: width 0.2s ease, background 0.2s ease;
+}
+.fbar-ok { background: var(--accent); }
 .form-success {
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
   color: var(--accent); padding: 14px 18px;
